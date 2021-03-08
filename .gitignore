@@ -1,5 +1,5 @@
 #db Connection
-src/user/constants.ts
+/src/constants.ts
 /schema.gql
 
 # compiled output
