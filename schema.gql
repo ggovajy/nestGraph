@@ -3,9 +3,9 @@
 # ------------------------------------------------------
 
 type User {
-  name: String!
-  email: String!
-  age: Float!
+  name: String
+  email: String
+  age: Float
 }
 
 type Query {
@@ -17,7 +17,7 @@ type Mutation {
 }
 
 input CreateUserInput {
-  name: String!
-  email: String!
-  age: Float!
+  name: String
+  email: String
+  age: Float
 }
