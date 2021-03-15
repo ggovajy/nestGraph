@@ -7,8 +7,12 @@ import { UserService } from './user/user.service';
 import { UserResolver } from './user/user.resolver';
 import { UserModule } from './user/user.module';
 import { userProviders } from './user/user.providers';
+import { roadAddrProviders } from './road-addr/road-addr.providers';
 import { databaseProviders } from './database/database.providers';
-import { DatabaseModule } from './database/database.module';
+import { RoadAddrController } from './road-addr/road-addr.controller';
+import { RoadAddrService } from './road-addr/road-addr.service';
+import { RoadAddrModule } from './road-addr/road-addr.module';
+import { RoadAddrResolver } from './road-addr/road-addr.resolver';
 
 @Module({
   imports: [
@@ -16,15 +20,18 @@ import { DatabaseModule } from './database/database.module';
       autoSchemaFile: 'schema.gql',
     }),
     UserModule,
-    DatabaseModule,
+    RoadAddrModule,
   ],
-  controllers: [AppController],
+  controllers: [AppController, RoadAddrController],
   providers: [
     AppService,
     UserService,
     UserResolver,
+    RoadAddrService,
+    RoadAddrResolver,
     ...databaseProviders,
     ...userProviders,
+    ...roadAddrProviders,
   ],
 })
 export class AppModule {}

@@ -18,8 +18,8 @@ export class UserResolver {
     return this.userService.find();
   }
 
-  // @Query(() => [User])
-  // async getUser(@Args('input') input: "6045a9fa858e2186a46d3a84") {
-  //   return this.userService.findByName("kim");
-  // }
+  @Query(() => [User])
+  async getUser(@Args('input') input: CreateUserInput) {
+    return this.userService.findByName(input);
+  }
 }

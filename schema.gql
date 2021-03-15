@@ -1,0 +1,42 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type User {
+  name: String
+  email: String
+  age: Float
+}
+
+type RoadAddr {
+  DONG_CD: String
+  SIDO_NM: String
+  SIGUNGU_NM: String
+  EMD_NM: String
+  age: Float
+}
+
+type Query {
+  users: [User!]!
+  getUser(input: CreateUserInput!): [User!]!
+  roadAddr: [RoadAddr!]!
+}
+
+input CreateUserInput {
+  name: String
+  email: String
+  age: Float
+}
+
+type Mutation {
+  createUser(input: CreateUserInput!): User!
+  createRoadAddr(input: CreateRoadAddrInput!): RoadAddr!
+}
+
+input CreateRoadAddrInput {
+  DONG_CD: String
+  SIDO_NM: String
+  SIGUNGU_NM: String
+  EMD_NM: String
+  age: Float
+}

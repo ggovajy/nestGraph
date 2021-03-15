@@ -18,7 +18,9 @@ export class UserService {
     return this.userModel.findOne(query).lean();
   }
   async findByName(query: FilterQuery<User>): Promise<User> {
-    return this.userModel.findOne(query).lean();
+    console.log(JSON.stringify(query));
+    console.log(`test ${query.name}`);
+    return this.userModel.find().where('name').equals(query.name);
   }
 
   async findOne(query: FilterQuery<User>): Promise<User> {

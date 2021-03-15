@@ -1,6 +1,6 @@
 #db Connection
-/src/constants.ts
-/schema.gql
+# /src/constants.ts
+# /schema.gql
 
 # compiled output
 /dist
